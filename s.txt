@@ -62,8 +62,8 @@ getgenv().SettingFarm ={
         ["Flash Step"] = false,
         ["Observation"] = false,
     },
-    ["Blox Fruit Sniper"] = {"Kitsune-Kitsune"},
-    ["Lock Fruit"] = {"Kitsune-Kitsune","Leopard-Leopard","Dragon-Dragon","Dough-Dough","Spirit-Spirit","Control-Control","Venom-Venom","Shadow-Shadow","T-Rex-T-Rex","Mammoth-Mammoth","Gravity-Gravity"},
+    ["Blox Fruit Sniper"] = {"Kitsune-Kitsune","Dough-Dough","Leopard-Leopard"},
+    ["Lock Fruit"] = {"Kitsune-Kitsune","Leopard-Leopard","Dragon-Dragon","Dough-Dough","T-Rex-T-Rex","Mammoth-Mammoth"},
     ["Webhook"] = {
         ["Enabled"] = false,
         ["WebhookUrl"] = "",
