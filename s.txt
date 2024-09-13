@@ -1,13 +1,8 @@
-
 script_key = "lNpvBEvlCnJGNQlJEKOMpMhPxftSOqkE"
-getgenv().SetFpsCap = false
+getgenv().SetFpsCap = false 
 getgenv().FpsCap = 30
-getgenv().OneClickUi = true -- Only Open Necessacry Ui For One Click
-getgenv().FpsBoost1 = true
-getgenv().FixCrash = false -- Turn it On For Hopping Server, Improve Performance But Silent Aim On Mob And Player
-getgenv().FixCrash2 = true -- Turn it On For Hopping Server, Improve Performance But Will Remove Speed Changer
-    getgenv().WhiteScreen = true
     getgenv().UiCheckItems = true
+    getgenv().WhiteScreen = true
     getgenv().OneClickSetting = {
         Enable=true,
         UnlimitGetQuest=true,
@@ -17,7 +12,7 @@ getgenv().FixCrash2 = true -- Turn it On For Hopping Server, Improve Performance
         Sea2KeyHop=true,
         FruitEat = { --Priority, Name, 
             [1] = {"Kitsune-Kitsune","Dough-Dough","Leopard-Leopard"},
-            [2] = {""}
+            [2] = {}
         },
         EatFruitFromStorage = false,
         SnipeFruit = true,
@@ -32,11 +27,7 @@ getgenv().FixCrash2 = true -- Turn it On For Hopping Server, Improve Performance
         DisableSoulGuitar = true,
         DisableCDK = true,
         DisableRaceEvolve = true,
-
-    }
-    getgenv().OneClickFarms = {
-        ["Shark Anchor"] = false,
+       MinFragment = 20000, --Farm After Max Level
     }
 getgenv().Team = "Pirates"
-getgenv().AutoLoad = false --Will Load Script On Server Hop
- loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6defa760de515eaa9b060a2aee22fbb8.lua"))()
