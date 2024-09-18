@@ -1,33 +1,59 @@
-script_key = "lNpvBEvlCnJGNQlJEKOMpMhPxftSOqkE"
-getgenv().Setting = {
-    AutoSkipWave=true,
-    AutoClaimQuest = true,
-    CapFps = true,
-    SelectLeaveWaveOneClick = 46,
-    FpsBoost = true,
-    WebhookUrl = "https://discord.com/api/webhooks/1285798504135921664/XZBFEnwDCVHZOnFRjQjVwI0ej2B8acpBGFQ7heVleUdoYVT6Ti15XPHznzwUhCdWsgFI",
-    OneClickNewSetting = { 
-        Enable = true,
-        Feed = true,
-        Leave=false,
-        AllChapter = false,
-        IgnoreEquipBest = false,
-        LeaveWave = true,
-        RequiredLevel = 20,
-        AllUnitsToGo = {"Admiral Of Lava"},
-        SnipeBannerUnits = {"Admiral Of Lava","Strongest Swordsman"}, --Snipe Unit Must Be In All Units To Use
-        TradingSnipe = false,
-        ForceInf = false, --Ignore Level, Unit
-        AnyUnitMythical_Secret = {
-            StartInfinite=true,
-            Feed=true,
-            IgnoreLevel = false
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Key = "0f89cc5166a9cf061ada086a"
+getgenv().TargetUnitRoll = {
+    "Admiral Of Lava"
+}
+
+getgenv().notRollUnitTarget = false
+getgenv().UseSavePosition = {
+    ["Enabled"] = false,
+    ["File Name"] = ""
+}
+getgenv().GemRollUnit = 2500
+getgenv().Speed = {
+    ["Speed"] = 2,
+    ["Wave Active Speed"] = 3,
+}
+getgenv()["Black Screen"] = true
+getgenv()["Auto Leave Infinite"] = {
+    ["Auto Leave"] = true,
+    ["Method"] = {
+        ["Sell"] = false,
+        ["Leave"] = true,
+    },
+    ["Wave"] = 46
+}
+getgenv().Auto_Equip = {
+    ["Equip Best"] = true,
+    ["Custom Equip"] = {
+        ["Enabled"] = false,
+        ["Units"] = {
+            "Chief Of Lava",
         },
-        TradingSnipeUnits = {"Electric Cyborg"},
-        MaxGemUnit = 1000,
     },
 }
-if getgenv().Loaded  then
-    return 
-end
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/950b9999b1274e4d6f9fadc85fe2d77e.lua"))()
+getgenv().Portal = {
+    ["Enabled"] = false, 
+    ["Name Portal"] = "Demon Portal", -- support only 4 portal lunar and Demon and Ancient Dragon and Cursed Kingdom
+    ["Auto Get Portal"] = false, ---- support only portal Ancient Dragon and Cursed Kingdom
+    ["Rarity Portal"] = {
+        ["Rare"] = true,
+        ["Epic"] = true,
+        ["Legendary"] = false,
+        ["Mythical"] = false,
+        ["Secret"] = false,
+    },
+    ["Unit"] = {
+        ["Use All Unit"] = true,
+        ["Custom Unit"] = {
+            "Admiral Of Lava",
+        }
+    },
+}
+getgenv().Webhook =  {
+    ["Webhook"] = false,
+    ["Url"] = "",
+    ["Roll Unit"] = true,
+    ["Story/Infinite"] = true,
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
