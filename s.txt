@@ -1,33 +1,33 @@
 script_key = "lNpvBEvlCnJGNQlJEKOMpMhPxftSOqkE"
-getgenv().SetFpsCap = false 
-getgenv().FpsCap = 30
-    getgenv().UiCheckItems = true
-    getgenv().WhiteScreen = true
-    getgenv().OneClickSetting = {
-        Enable=true,
-        UnlimitGetQuest=true,
-        TripleQuest=true,
-        AutoAddStats=true,
-        RedeemCode=true,
-        Sea2KeyHop=true,
-        FruitEat = { --Priority, Name, 
-            [1] = {"Kitsune-Kitsune","Dough-Dough","Leopard-Leopard"},
-            [2] = {}
+getgenv().Setting = {
+    AutoSkipWave=true,
+    AutoClaimQuest = true,
+    CapFps = true,
+    SelectLeaveWaveOneClick = 46,
+    FpsBoost = true,
+    WebhookUrl = "",
+    OneClickNewSetting = { 
+        Enable = true,
+        Feed = true,
+        Leave=false,
+        AllChapter = false,
+        IgnoreEquipBest = false,
+        LeaveWave = true,
+        RequiredLevel = 20,
+        AllUnitsToGo = {"Admiral Of Lava"},
+        SnipeBannerUnits = {"Admiral Of Lava","Strongest Swordsman"}, --Snipe Unit Must Be In All Units To Use
+        TradingSnipe = false,
+        ForceInf = false, --Ignore Level, Unit
+        AnyUnitMythical_Secret = {
+            StartInfinite=true,
+            Feed=true,
+            IgnoreLevel = false
         },
-        EatFruitFromStorage = false,
-        SnipeFruit = true,
-        SnipeFruitMirage = true,
-        HopIfFoundNearExploiter = true,
-        HopHakiColor =false,
-        HopTushita = false,
-        HopValkyriehelm = false,
-        HopMirrorFractal=false,
-        FarmPole = false, -- Turn off If Want Focus Level
-        FarmItems = false, --Turn off If Want Focus Level And CDK, THis Only get After You Get God Human
-        DisableSoulGuitar = true,
-        DisableCDK = true,
-        DisableRaceEvolve = true,
-       MinFragment = 20000, --Farm After Max Level
-    }
-getgenv().Team = "Pirates"
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6defa760de515eaa9b060a2aee22fbb8.lua"))()
+        TradingSnipeUnits = {"Electric Cyborg"},
+        MaxGemUnit = 1000,
+    },
+}
+if getgenv().Loaded  then
+    return 
+end
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/950b9999b1274e4d6f9fadc85fe2d77e.lua"))()
